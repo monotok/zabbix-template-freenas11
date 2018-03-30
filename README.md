@@ -11,10 +11,12 @@ https://share.zabbix.com/official-templates/snmp-devices/snmp-interfaces-discove
 https://share.zabbix.com/official-templates/snmp-devices/snmp-processors-discovery
 https://share.zabbix.com/official-templates/snmp-devices/snmp-generic
 
-2) Import the template
+2) The FREENAS-MIB.txt will also need to be uploaded to your Zabbix Server. The MIB can be downloaded from your FreeNAS server and is located in /usr/local/share/snmp/mibs/.
 
-3) Add the host, include the macro {$SNMPCOMMUNITY}
+3) Import the template
 
-4) Wait
+4) Add the host, include the macro {$SNMPCOMMUNITY}
+
+5) Wait
 
 Memory should be pretty quick while the zpools might take a while.
