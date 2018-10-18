@@ -5,13 +5,18 @@ It has more graphs and triggers. It uses the OID as zabbix was having issues par
 Note: You might get erros if you don't fix the MIB. See bug here:
 https://forums.freenas.org/index.php?threads/freenas-11-1-snmp-index-out-of-range.62732/
 
-Please Note: For ZVols, ZPools and Datasets the data is multiplied by 4096 under PreProcessing. This is the AllocationUnits. All of mine were 4096 so decided this is neater. Obviously this can be changed if required, you can get his data from an SNMP Walk. This could be done automatically by creating a item prototype of allocationUnits, another to get the data in units and then another item prototype to to calculate the value in bytes. This would instead of 14 item prototypes; there would be 42. If anyone knows of a better way then please let me know.
+Please Note: For ZVols and Datasets the data is multiplied now by AllocationUnit provided via SNMP for each of them. 
+Due to very inconsistent MIB data, some of the ZVol, Zpool an Dataset data is reported in units (AllocationUnits) and some of it is reported in Bytes.
+I.E. Used space per dataset/zvol is reported in bytes, but available space is reported in allocation units.
+This is not the case for Zpools! 
+Who decided this is a good idea, I don't know. 
 
-Eg: snmpwalk -v 2c -c public 192.168.1.50 FREENAS-MIB::zvolAllocationUnits
-snmpwalk -v 2c -c public 192.168.1.50 FREENAS-MIB::zpoolAllocationUnits
-snmpwalk -v 2c -c public 192.168.1.50 FREENAS-MIB::datasetAllocationUnits
+Additionally, I calculate some of the IO/s and read/write data as the one provided via MIB is only instantaneous (as within last second).
+Ops for ZIL, I don't even think they work. I have ZIL on one of the devices but see no data for it. They also are only instantenous for last 1,5 or 10 seconds.
 
 
+
+Useful info below:
 
 1) Import the following templates if they are not already
 https://share.zabbix.com/official-templates/snmp-devices/snmp-interfaces-discovery
