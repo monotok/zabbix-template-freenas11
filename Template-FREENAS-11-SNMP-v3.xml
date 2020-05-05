@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-03-30T13:05:09Z</date>
+    <date>2018-10-18T13:58:17Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -351,53 +351,6 @@ http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>Swap Error Message</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <snmp_oid>UCD-SNMP-MIB::memSwapErrorMsg.0</snmp_oid>
-                    <key>memSwapErrMsg</key>
-                    <delay>60s</delay>
-                    <history>90d</history>
-                    <trends>0</trends>
-                    <status>0</status>
-                    <value_type>4</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description>OID: .1.3.6.1.4.1.2021.4.101&#13;
-&#13;
-Describes whether the amount of available swap space&#13;
-(as reported by 'memAvailSwap(4)'), is less than the&#13;
-desired minimum (specified by 'memMinimumSwap(12)').&#13;
-&#13;
-http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>Memory</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
-                    <preprocessing/>
-                    <jmx_endpoint/>
-                    <master_item/>
-                </item>
-                <item>
                     <name>Swap Error</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
@@ -441,6 +394,53 @@ http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
                     <valuemap>
                         <name>FreeBSD-SWAP-ERR</name>
                     </valuemap>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>Swap Error Message</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>UCD-SNMP-MIB::memSwapErrorMsg.0</snmp_oid>
+                    <key>memSwapErrMsg</key>
+                    <delay>60s</delay>
+                    <history>90d</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>4</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>OID: .1.3.6.1.4.1.2021.4.101&#13;
+&#13;
+Describes whether the amount of available swap space&#13;
+(as reported by 'memAvailSwap(4)'), is less than the&#13;
+desired minimum (specified by 'memMinimumSwap(12)').&#13;
+&#13;
+http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Memory</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
                     <logtimefmt/>
                     <preprocessing/>
                     <jmx_endpoint/>
@@ -770,6 +770,93 @@ http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
                     <master_item/>
                 </item>
                 <item>
+                    <name>Arc Hits/s</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.50536.1.4.4.0</snmp_oid>
+                    <key>zfs.Archits.ps</key>
+                    <delay>60</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>ZFS statistics</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing>
+                        <step>
+                            <type>10</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>Current Arc Cache Hit ratio</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>zfs.Architscurrent</key>
+                    <delay>60</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>%</units>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params>100*last(&quot;zfs.Archits.ps&quot;)/(last(&quot;zfs.Archits.ps&quot;)+last(&quot;zfs.ArcMisses.ps&quot;))</params>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>ZFS statistics</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
                     <name>Arc meta</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
@@ -848,6 +935,52 @@ http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
                     <valuemap/>
                     <logtimefmt/>
                     <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>Arc misses/s</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>.1.3.6.1.4.1.50536.1.4.5.0</snmp_oid>
+                    <key>zfs.ArcMisses.ps</key>
+                    <delay>60</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Arc misses</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>ZFS statistics</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing>
+                        <step>
+                            <type>10</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <master_item/>
                 </item>
@@ -1021,11 +1154,52 @@ http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>L2Arc hits</name>
+                    <name>Total arc requests/s</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>zfs.Arctotal.ps</key>
+                    <delay>60</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params>last(&quot;zfs.Archits.ps&quot;)+last(&quot;zfs.ArcMisses.ps&quot;)</params>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>ZFS statistics</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>L2Arc hits/s</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>.1.3.6.1.4.1.50536.1.5.1.0</snmp_oid>
-                    <key>zfs.L2Archits</key>
+                    <key>zfs.L2Archits.ps</key>
                     <delay>60</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1057,16 +1231,62 @@ http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
+                    <preprocessing>
+                        <step>
+                            <type>10</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>Current L2Arc Cache Hit ratio</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>zfs.L2Architscurrent</key>
+                    <delay>60</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>%</units>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params>100*last(&quot;zfs.L2Archits.ps&quot;)/(last(&quot;zfs.L2Archits.ps&quot;)+last(&quot;zfs.L2ArcMisses.ps&quot;))</params>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>ZFS statistics</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
                     <preprocessing/>
                     <jmx_endpoint/>
                     <master_item/>
                 </item>
                 <item>
-                    <name>L2Arc misses</name>
+                    <name>L2Arc misses/s</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>.1.3.6.1.4.1.50536.1.5.2.0</snmp_oid>
-                    <key>zfs.L2ArcMisses</key>
+                    <key>zfs.L2ArcMisses.ps</key>
                     <delay>60</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1098,7 +1318,12 @@ http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>10</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <master_item/>
                 </item>
@@ -1145,6 +1370,47 @@ http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
                             <params>1024</params>
                         </step>
                     </preprocessing>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>Total L2arc requests/s</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>zfs.L2Arctotal.ps</key>
+                    <delay>60</delay>
+                    <history>90d</history>
+                    <trends>365d</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params>last(&quot;zfs.L2Archits.ps&quot;)+last(&quot;zfs.L2ArcMisses.ps&quot;)</params>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>ZFS statistics</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
                     <jmx_endpoint/>
                     <master_item/>
                 </item>
@@ -1224,12 +1490,12 @@ http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
                     <description>Discover the datasets available on the FreeNAS system</description>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Available bytes on dataset {#SNMPVALUE}</name>
+                            <name>Allocation Unit size in bytes on dataset {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <snmp_oid>.1.3.6.1.4.1.50536.1.2.1.1.6.{#SNMPINDEX}</snmp_oid>
-                            <key>vfs.fs.size[{#SNMPVALUE},free ]</key>
-                            <delay>60s</delay>
+                            <snmp_oid>.1.3.6.1.4.1.50536.1.2.1.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>vfs.fs.size[{#SNMPVALUE},allocationunits2]</key>
+                            <delay>60</delay>
                             <history>90d</history>
                             <trends>365d</trends>
                             <status>0</status>
@@ -1251,19 +1517,98 @@ http://www.net-snmp.org/docs/mibs/ucdavis.html</description>
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The available bytes of each dataset. This is multiplied by the datasetAllocationUnits which is usually 4096.&#13;
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>Zpool Datasets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Available Bytes of dataset {#SNMPVALUE}</name>
+                            <type>15</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>vfs.fs.size[{#SNMPVALUE},bytesfree2]</key>
+                            <delay>60s</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>B</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params>last(&quot;vfs.fs.size[{#SNMPVALUE},free2]&quot;)*last(&quot;vfs.fs.size[{#SNMPVALUE},allocationunits2]&quot;)</params>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>Zpool Datasets</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Available units on dataset {#SNMPVALUE}</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.50536.1.2.1.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>vfs.fs.size[{#SNMPVALUE},free2]</key>
+                            <delay>60s</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>The available units of each dataset. Needs multiplying by datasetAllocationUnits &#13;
 &#13;
 The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing>
-                                <step>
-                                    <type>1</type>
-                                    <params>4096</params>
-                                </step>
-                            </preprocessing>
+                            <preprocessing/>
                             <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
@@ -1277,7 +1622,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <type>15</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>vfs.fs.size[{#SNMPVALUE},pfree ]</key>
+                            <key>vfs.fs.size[{#SNMPVALUE},pfree2]</key>
                             <delay>60s</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -1292,7 +1637,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <params>100*last(&quot;vfs.fs.size[{#SNMPVALUE},used ]&quot;,0)/last(&quot;vfs.fs.size[{#SNMPVALUE}]&quot;,0)</params>
+                            <params>100*last(&quot;vfs.fs.size[{#SNMPVALUE},used2]&quot;)/(last(&quot;vfs.fs.size[{#SNMPVALUE},total2]&quot;)*last(&quot;vfs.fs.size[{#SNMPVALUE},allocationunits2]&quot;))</params>
                             <ipmi_sensor/>
                             <authtype>0</authtype>
                             <username/>
@@ -1315,18 +1660,18 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Used bytes on dataset {#SNMPVALUE}</name>
+                            <name>Size of dataset {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <snmp_oid>.1.3.6.1.4.1.50536.1.2.1.1.5.{#SNMPINDEX}</snmp_oid>
-                            <key>vfs.fs.size[{#SNMPVALUE},used ]</key>
+                            <snmp_oid>.1.3.6.1.4.1.50536.1.2.1.1.4.{#SNMPINDEX}</snmp_oid>
+                            <key>vfs.fs.size[{#SNMPVALUE},total2]</key>
                             <delay>60s</delay>
                             <history>90d</history>
                             <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>B</units>
+                            <units/>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1342,19 +1687,12 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The used bytes in each dataset. This is multiplied by the datasetAllocationUnits which is usually 4096.&#13;
-&#13;
-The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
+                            <description>The size of each dataset - in units.</description>
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing>
-                                <step>
-                                    <type>1</type>
-                                    <params>4096</params>
-                                </step>
-                            </preprocessing>
+                            <preprocessing/>
                             <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
@@ -1364,11 +1702,11 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Size of dataset {#SNMPVALUE}</name>
+                            <name>Used Bytes on dataset {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <snmp_oid>.1.3.6.1.4.1.50536.1.2.1.1.4.{#SNMPINDEX}</snmp_oid>
-                            <key>vfs.fs.size[{#SNMPVALUE}]</key>
+                            <snmp_oid>.1.3.6.1.4.1.50536.1.2.1.1.5.{#SNMPINDEX}</snmp_oid>
+                            <key>vfs.fs.size[{#SNMPVALUE},used2]</key>
                             <delay>60s</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -1391,9 +1729,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The size of each dataset. This is multiplied by the datasetAllocationUnits which is usually 4096.&#13;
-&#13;
-The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
+                            <description>The used units in each dataset.</description>
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
@@ -1415,9 +1751,9 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template SNMP FreeNAS 11:vfs.fs.size[{#SNMPVALUE},pfree ].last(1h)}&gt;70</expression>
+                            <expression>{Template SNMP FreeNAS 11:vfs.fs.size[{#SNMPVALUE},pfree2].last(1h)}&gt;70</expression>
                             <recovery_mode>1</recovery_mode>
-                            <recovery_expression>{Template SNMP FreeNAS 11:vfs.fs.size[{#SNMPVALUE},pfree ].last(6h)}&lt;65</recovery_expression>
+                            <recovery_expression>{Template SNMP FreeNAS 11:vfs.fs.size[{#SNMPVALUE},pfree2].last(6h)}&lt;65</recovery_expression>
                             <name>Dataset {#SNMPVALUE} usage is over 70%</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
@@ -1459,7 +1795,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE},pfree ]</key>
+                                        <key>vfs.fs.size[{#SNMPVALUE},pfree2]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -1491,7 +1827,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE},used ]</key>
+                                        <key>vfs.fs.size[{#SNMPVALUE},used2]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1503,7 +1839,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE},free ]</key>
+                                        <key>vfs.fs.size[{#SNMPVALUE},free2]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -1535,7 +1871,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE},used ]</key>
+                                        <key>vfs.fs.size[{#SNMPVALUE},used2]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1547,7 +1883,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE},free ]</key>
+                                        <key>vfs.fs.size[{#SNMPVALUE},free2]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -1589,7 +1925,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                     <description>ZFS pools</description>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Read bandwidth on pool {#SNMPVALUE}</name>
+                            <name>Current Read bandwidth on pool {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.14.{#SNMPINDEX}</snmp_oid>
@@ -1600,7 +1936,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>B/s</units>
+                            <units>Bps</units>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1625,18 +1961,13 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing>
-                                <step>
-                                    <type>1</type>
-                                    <params>4096</params>
-                                </step>
-                            </preprocessing>
+                            <preprocessing/>
                             <jmx_endpoint/>
                             <application_prototypes/>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Total read bandwidth on pool {#SNMPVALUE}</name>
+                            <name>Read bandwidth on pool {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.10.{#SNMPINDEX}</snmp_oid>
@@ -1647,7 +1978,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>B</units>
+                            <units>Bps</units>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1674,8 +2005,8 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <logtimefmt/>
                             <preprocessing>
                                 <step>
-                                    <type>1</type>
-                                    <params>4096</params>
+                                    <type>10</type>
+                                    <params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -1683,7 +2014,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Write bandwidth on pool {#SNMPVALUE}</name>
+                            <name>Current Write bandwidth on pool {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.15.{#SNMPINDEX}</snmp_oid>
@@ -1694,7 +2025,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>B/s</units>
+                            <units>Bps</units>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1719,18 +2050,13 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing>
-                                <step>
-                                    <type>1</type>
-                                    <params>4096</params>
-                                </step>
-                            </preprocessing>
+                            <preprocessing/>
                             <jmx_endpoint/>
                             <application_prototypes/>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Total write bandwidth on pool {#SNMPVALUE}</name>
+                            <name>Write bandwidth on pool {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.11.{#SNMPINDEX}</snmp_oid>
@@ -1741,7 +2067,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>B</units>
+                            <units>Bps</units>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1768,8 +2094,8 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <logtimefmt/>
                             <preprocessing>
                                 <step>
-                                    <type>1</type>
-                                    <params>4096</params>
+                                    <type>10</type>
+                                    <params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -1777,7 +2103,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Total IO Read Ops on pool {#SNMPVALUE}</name>
+                            <name>IO Read Ops on pool {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.8.{#SNMPINDEX}</snmp_oid>
@@ -1788,7 +2114,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>IO</units>
+                            <units>IO/s</units>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1813,13 +2139,18 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing/>
+                            <preprocessing>
+                                <step>
+                                    <type>10</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
                             <jmx_endpoint/>
                             <application_prototypes/>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>IO Read Ops on pool {#SNMPVALUE}</name>
+                            <name>Current IO Read Ops on pool {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.12.{#SNMPINDEX}</snmp_oid>
@@ -1861,7 +2192,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Total IO Write Ops on pool {#SNMPVALUE}</name>
+                            <name>IO Write Ops on pool {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.9.{#SNMPINDEX}</snmp_oid>
@@ -1897,13 +2228,18 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing/>
+                            <preprocessing>
+                                <step>
+                                    <type>10</type>
+                                    <params/>
+                                </step>
+                            </preprocessing>
                             <jmx_endpoint/>
                             <application_prototypes/>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>IO Write Ops on pool {#SNMPVALUE}</name>
+                            <name>Current IO Write Ops on pool {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.13.{#SNMPINDEX}</snmp_oid>
@@ -1945,11 +2281,11 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Available bytes on pool {#SNMPVALUE}</name>
+                            <name>Allocation Unit size in bytes on pool {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                            <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.6.{#SNMPINDEX}</snmp_oid>
-                            <key>vfs.fs.size[{#SNMPVALUE},free]</key>
+                            <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>vfs.fs.size[{#SNMPVALUE},allocationunits]</key>
                             <delay>60</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -1972,9 +2308,177 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The number of available bytes on the pool.&#13;
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Zpool statistics</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes/>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Available Bytes of pool {#SNMPVALUE}</name>
+                            <type>15</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>vfs.fs.size[{#SNMPVALUE},bytesfree]</key>
+                            <delay>60</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>B</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params>last(&quot;vfs.fs.size[{#SNMPVALUE},free]&quot;)*last(&quot;vfs.fs.size[{#SNMPVALUE},allocationunits]&quot;)</params>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Zpool statistics</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes/>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Total size in Bytes of pool {#SNMPVALUE}</name>
+                            <type>15</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>vfs.fs.size[{#SNMPVALUE},bytestotal]</key>
+                            <delay>60</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>B</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params>last(&quot;vfs.fs.size[{#SNMPVALUE},total]&quot;)*last(&quot;vfs.fs.size[{#SNMPVALUE},allocationunits]&quot;)</params>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Zpool statistics</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes/>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Used Bytes of pool {#SNMPVALUE}</name>
+                            <type>15</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>vfs.fs.size[{#SNMPVALUE},bytesused]</key>
+                            <delay>60</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>B</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params>last(&quot;vfs.fs.size[{#SNMPVALUE},used]&quot;)*last(&quot;vfs.fs.size[{#SNMPVALUE},allocationunits]&quot;)</params>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Zpool statistics</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes/>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Available units on pool {#SNMPVALUE}</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.6.{#SNMPINDEX}</snmp_oid>
+                            <key>vfs.fs.size[{#SNMPVALUE},free]</key>
+                            <delay>60</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>The number of available units on the pool.&#13;
 &#13;
-This is multiplied by the datasetAllocationUnits which is usually 4096.&#13;
+This needs to be multiplied by the datasetAllocationUnits.&#13;
 &#13;
 The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <inventory_link>0</inventory_link>
@@ -1985,12 +2489,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing>
-                                <step>
-                                    <type>1</type>
-                                    <params>4096</params>
-                                </step>
-                            </preprocessing>
+                            <preprocessing/>
                             <jmx_endpoint/>
                             <application_prototypes/>
                             <master_item_prototype/>
@@ -2015,7 +2514,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <params>100*last(&quot;vfs.fs.size[{#SNMPVALUE},used]&quot;,0)/last(&quot;vfs.fs.size[{#SNMPVALUE},total]&quot;,0)</params>
+                            <params>100*(last(&quot;vfs.fs.size[{#SNMPVALUE},used]&quot;)/last(&quot;vfs.fs.size[{#SNMPVALUE},total]&quot;))</params>
                             <ipmi_sensor/>
                             <authtype>0</authtype>
                             <username/>
@@ -2038,7 +2537,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Size of pool {#SNMPVALUE}</name>
+                            <name>Total size in units of pool {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.4.{#SNMPINDEX}</snmp_oid>
@@ -2049,7 +2548,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>B</units>
+                            <units/>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -2065,7 +2564,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The size of the pool expressed as bytes</description>
+                            <description>The size of the pool in allocation units.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -2074,18 +2573,13 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing>
-                                <step>
-                                    <type>1</type>
-                                    <params>4096</params>
-                                </step>
-                            </preprocessing>
+                            <preprocessing/>
                             <jmx_endpoint/>
                             <application_prototypes/>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Used bytes on pool {#SNMPVALUE}</name>
+                            <name>Used units on pool {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.1.1.1.5.{#SNMPINDEX}</snmp_oid>
@@ -2096,7 +2590,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>B</units>
+                            <units/>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -2112,7 +2606,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The number of used bytes in the pool.</description>
+                            <description>The number of used allocation units in the pool.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -2121,12 +2615,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing>
-                                <step>
-                                    <type>1</type>
-                                    <params>4096</params>
-                                </step>
-                            </preprocessing>
+                            <preprocessing/>
                             <jmx_endpoint/>
                             <application_prototypes/>
                             <master_item_prototype/>
@@ -2346,7 +2835,7 @@ online(0), degraded(1), faulted(2), offline(3), unavail(4), removed(5)</descript
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.bandwidth[{#SNMPVALUE},read]</key>
+                                        <key>vfs.fs.bandwidth[{#SNMPVALUE},read ]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2358,7 +2847,7 @@ online(0), degraded(1), faulted(2), offline(3), unavail(4), removed(5)</descript
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.bandwidth[{#SNMPVALUE},write]</key>
+                                        <key>vfs.fs.bandwidth[{#SNMPVALUE},write ]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2370,19 +2859,19 @@ online(0), degraded(1), faulted(2), offline(3), unavail(4), removed(5)</descript
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.iops[{#SNMPVALUE},read]</key>
+                                        <key>vfs.fs.iops[{#SNMPVALUE},read ]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
                                     <sortorder>3</sortorder>
                                     <drawtype>0</drawtype>
-                                    <color>C800C8</color>
+                                    <color>550055</color>
                                     <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.iops[{#SNMPVALUE},write]</key>
+                                        <key>vfs.fs.iops[{#SNMPVALUE},write ]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -2414,7 +2903,7 @@ online(0), degraded(1), faulted(2), offline(3), unavail(4), removed(5)</descript
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE},used]</key>
+                                        <key>vfs.fs.size[{#SNMPVALUE},bytesused]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2426,7 +2915,7 @@ online(0), degraded(1), faulted(2), offline(3), unavail(4), removed(5)</descript
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE},free]</key>
+                                        <key>vfs.fs.size[{#SNMPVALUE},bytesfree]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -2468,11 +2957,95 @@ online(0), degraded(1), faulted(2), offline(3), unavail(4), removed(5)</descript
                     <description>Find all the zvols on the FreeNAS system</description>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Available bytes on zvol {#SNMPVALUE}</name>
+                            <name>Allocation Unit size in bytes on zvol {#SNMPVALUE}</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <snmp_oid>.1.3.6.1.4.1.50536.1.3.1.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>vfs.fs.size[{#SNMPVALUE},allocationunits3]</key>
+                            <delay>60</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>B</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>Zpool Zvols</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Used Bytes of zvol {#SNMPVALUE}</name>
+                            <type>15</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>vfs.fs.size[{#SNMPVALUE},bytesused3]</key>
+                            <delay>60s</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>B</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params>last(&quot;vfs.fs.size[{#SNMPVALUE},used3]&quot;)*last(&quot;vfs.fs.size[{#SNMPVALUE},allocationunits3]&quot;)</params>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>Zpool Zvols</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Available Bytes on zvol {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.3.1.1.6.{#SNMPINDEX}</snmp_oid>
-                            <key>vfs.fs.size[{#SNMPVALUE},free  ]</key>
+                            <key>vfs.fs.size[{#SNMPVALUE},free3]</key>
                             <delay>60s</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -2495,9 +3068,7 @@ online(0), degraded(1), faulted(2), offline(3), unavail(4), removed(5)</descript
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The available bytes of each zvol. This is multiplied by the datasetAllocationUnits which is usually 4096.&#13;
-&#13;
-The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
+                            <description>The available units of each zvol.</description>
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
@@ -2521,7 +3092,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <type>15</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>vfs.fs.size[{#SNMPVALUE}, pfree]</key>
+                            <key>vfs.fs.size[{#SNMPVALUE},pfree3]</key>
                             <delay>60s</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -2536,7 +3107,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <snmpv3_authpassphrase/>
                             <snmpv3_privprotocol>0</snmpv3_privprotocol>
                             <snmpv3_privpassphrase/>
-                            <params>100*last(&quot;vfs.fs.size[{#SNMPVALUE}, used]&quot;,0)/last(&quot;vfs.fs.size[{#SNMPVALUE}, total]&quot;,0)</params>
+                            <params>100*last(&quot;vfs.fs.size[{#SNMPVALUE},used3]&quot;,0)/last(&quot;vfs.fs.size[{#SNMPVALUE},total3]&quot;,0)</params>
                             <ipmi_sensor/>
                             <authtype>0</authtype>
                             <username/>
@@ -2563,7 +3134,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.3.1.1.4.{#SNMPINDEX}</snmp_oid>
-                            <key>vfs.fs.size[{#SNMPVALUE}, total]</key>
+                            <key>vfs.fs.size[{#SNMPVALUE},total3]</key>
                             <delay>60s</delay>
                             <history>90d</history>
                             <trends>365d</trends>
@@ -2586,19 +3157,12 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The size of each zvol. This is multiplied by the datasetAllocationUnits which is usually 4096.&#13;
-&#13;
-The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
+                            <description>The size of each zvol.</description>
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing>
-                                <step>
-                                    <type>1</type>
-                                    <params>4096</params>
-                                </step>
-                            </preprocessing>
+                            <preprocessing/>
                             <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
@@ -2608,18 +3172,18 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Used bytes on zvol {#SNMPVALUE}</name>
+                            <name>Used units on zvol {#SNMPVALUE}</name>
                             <type>4</type>
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>.1.3.6.1.4.1.50536.1.3.1.1.5.{#SNMPINDEX}</snmp_oid>
-                            <key>vfs.fs.size[{#SNMPVALUE}, used]</key>
+                            <key>vfs.fs.size[{#SNMPVALUE},used3]</key>
                             <delay>60s</delay>
                             <history>90d</history>
                             <trends>365d</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
-                            <units>B</units>
+                            <units/>
                             <snmpv3_contextname/>
                             <snmpv3_securityname/>
                             <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -2635,19 +3199,12 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>The used bytes in each zvol. This is multiplied by the datasetAllocationUnits which is usually 4096.&#13;
-&#13;
-The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
+                            <description>The used units in each zvol.</description>
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing>
-                                <step>
-                                    <type>1</type>
-                                    <params>4096</params>
-                                </step>
-                            </preprocessing>
+                            <preprocessing/>
                             <jmx_endpoint/>
                             <application_prototypes>
                                 <application_prototype>
@@ -2659,9 +3216,9 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template SNMP FreeNAS 11:vfs.fs.size[{#SNMPVALUE}, pfree].last(1h)}&gt;70</expression>
+                            <expression>{Template SNMP FreeNAS 11:vfs.fs.size[{#SNMPVALUE},pfree3].last(1h)}&gt;70</expression>
                             <recovery_mode>1</recovery_mode>
-                            <recovery_expression>{Template SNMP FreeNAS 11:vfs.fs.size[{#SNMPVALUE}, pfree].last(6h)}&lt;65</recovery_expression>
+                            <recovery_expression>{Template SNMP FreeNAS 11:vfs.fs.size[{#SNMPVALUE},pfree3].last(6h)}&lt;65</recovery_expression>
                             <name>Zvol {#SNMPVALUE} usage is over 70%</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
@@ -2703,7 +3260,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE}, pfree]</key>
+                                        <key>vfs.fs.size[{#SNMPVALUE},pfree3]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -2735,7 +3292,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE}, used]</key>
+                                        <key>vfs.fs.size[{#SNMPVALUE},used3]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -2747,51 +3304,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
                                     <type>0</type>
                                     <item>
                                         <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE},free  ]</key>
-                                    </item>
-                                </graph_item>
-                            </graph_items>
-                        </graph_prototype>
-                        <graph_prototype>
-                            <name>ZVol {#SNMPVALUE} Usage</name>
-                            <width>900</width>
-                            <height>200</height>
-                            <yaxismin>0.0000</yaxismin>
-                            <yaxismax>100.0000</yaxismax>
-                            <show_work_period>1</show_work_period>
-                            <show_triggers>1</show_triggers>
-                            <type>1</type>
-                            <show_legend>1</show_legend>
-                            <show_3d>0</show_3d>
-                            <percent_left>0.0000</percent_left>
-                            <percent_right>0.0000</percent_right>
-                            <ymin_type_1>0</ymin_type_1>
-                            <ymax_type_1>0</ymax_type_1>
-                            <ymin_item_1>0</ymin_item_1>
-                            <ymax_item_1>0</ymax_item_1>
-                            <graph_items>
-                                <graph_item>
-                                    <sortorder>0</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>1A7C11</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE}, used]</key>
-                                    </item>
-                                </graph_item>
-                                <graph_item>
-                                    <sortorder>1</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>F63100</color>
-                                    <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>Template SNMP FreeNAS 11</host>
-                                        <key>vfs.fs.size[{#SNMPVALUE},free  ]</key>
+                                        <key>vfs.fs.size[{#SNMPVALUE},free3]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -2803,17 +3316,7 @@ The OID for this is .1.3.6.1.4.1.50536.1.2.1.1.3</description>
             </discovery_rules>
             <httptests/>
             <macros/>
-            <templates>
-                <template>
-                    <name>Template SNMP Generic</name>
-                </template>
-                <template>
-                    <name>Template SNMP Interfaces</name>
-                </template>
-                <template>
-                    <name>Template SNMP Processors</name>
-                </template>
-            </templates>
+            <templates/>
             <screens/>
         </template>
     </templates>
@@ -2839,6 +3342,94 @@ desired minimum (specified by 'memMinimumSwap(12)').</description>
     </triggers>
     <graphs>
         <graph>
+            <name>Arc Cache requests</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>FF9999</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.Arctotal.ps</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>00BB00</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.Archits.ps</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Arc cache size</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>1A7C11</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.Arcsize</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>F63100</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.L2Arcsize</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
             <name>Arc data</name>
             <width>900</width>
             <height>200</height>
@@ -2860,7 +3451,7 @@ desired minimum (specified by 'memMinimumSwap(12)').</description>
                     <sortorder>0</sortorder>
                     <drawtype>0</drawtype>
                     <color>00C800</color>
-                    <yaxisside>0</yaxisside>
+                    <yaxisside>1</yaxisside>
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
@@ -2872,7 +3463,7 @@ desired minimum (specified by 'memMinimumSwap(12)').</description>
                     <sortorder>1</sortorder>
                     <drawtype>0</drawtype>
                     <color>C80000</color>
-                    <yaxisside>0</yaxisside>
+                    <yaxisside>1</yaxisside>
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
@@ -2884,7 +3475,7 @@ desired minimum (specified by 'memMinimumSwap(12)').</description>
                     <sortorder>2</sortorder>
                     <drawtype>0</drawtype>
                     <color>0000C8</color>
-                    <yaxisside>0</yaxisside>
+                    <yaxisside>1</yaxisside>
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
@@ -2896,7 +3487,7 @@ desired minimum (specified by 'memMinimumSwap(12)').</description>
                     <sortorder>3</sortorder>
                     <drawtype>0</drawtype>
                     <color>C800C8</color>
-                    <yaxisside>0</yaxisside>
+                    <yaxisside>1</yaxisside>
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
@@ -2946,6 +3537,50 @@ desired minimum (specified by 'memMinimumSwap(12)').</description>
                     <item>
                         <host>Template SNMP FreeNAS 11</host>
                         <key>zfs.ArcMissratio</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Arc L2Arc Cache requests</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>FF9999</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.L2Arctotal.ps</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>00CCCC</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.L2Archits.ps</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -3082,6 +3717,118 @@ desired minimum (specified by 'memMinimumSwap(12)').</description>
                     <item>
                         <host>Template SNMP FreeNAS 11</host>
                         <key>memMinSwap</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Combined Arc requests</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>1A7C11</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.Archits.ps</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>F63100</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.ArcMisses.ps</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>2774A4</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.L2Archits.ps</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>3</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>A54F10</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.L2ArcMisses.ps</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Current Arc/L2Arc Cache hit ratio</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>1</ymin_type_1>
+            <ymax_type_1>1</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>1A7C11</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.Architscurrent</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>F63100</color>
+                    <yaxisside>1</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template SNMP FreeNAS 11</host>
+                        <key>zfs.L2Architscurrent</key>
                     </item>
                 </graph_item>
             </graph_items>
