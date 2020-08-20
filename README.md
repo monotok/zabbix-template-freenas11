@@ -25,6 +25,8 @@ https://share.zabbix.com/official-templates/snmp-devices/snmp-generic
 
 2) The FREENAS-MIB.txt will also need to be uploaded to your Zabbix Server. The MIB can be downloaded from your FreeNAS server and is located in /usr/local/share/snmp/mibs/.
 
+NOTE: If using Debian 10 then you will need copy "SNMPv2-MIB.txt" and "SNMPv2-TC.txt" to the zabbix host. See issue 4: https://github.com/monotok/zabbix-template-freenas11/issues/4
+
 3) Import the template
 
 4) Add the host, include the macro {$SNMPCOMMUNITY}
